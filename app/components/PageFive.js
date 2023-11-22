@@ -1,54 +1,43 @@
-import Image from "next/image";
+
+
+"use client"
+
+import React, {useLayoutEffect} from 'react';
+
+import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const PageFive = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useLayoutEffect(() => {
+    gsap.to("div.bg-gradient-to-b", {scrollTrigger: {trigger: "div.bg-gradient-to-b", start: "5% bottom"}, x: 0, duration: 1.5});
+  }, [])
+  
   return (
     <div style={{ 
       display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'start',
+      justifyContent: 'flex-start',
       alignItems: 'center',
       width: '100vw', 
       height: '100vh', 
-      backgroundColor: '#000041' 
     }}>
-      {/* Gray banner */}
-      <div className="flex justify-center gap-12 bg-inactive w-full h-36 py-4 mt-20">
-        <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
-        <p className="w-[45%] pt-8"><span className="font-semibold">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
+      <div className="flex justify-between items-center w-[90%] gap-20 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-e-full h-[75%] overflow-visible translate-x-[-2000px]">
+        <div className="flex flex-col justify-center items-start w-[90%] ml-10">
+          <p className="text-highlight text-4xl font-semibold overflow-y-hidden">Now Fans Get To Choose!!!</p>
+          <p className='flex flex-col'>
+            <span className='my-3'>On 3BX, fans of indie authors, animators, musicians and artists can get fresh-off-the-press, exclusive access to creations, private book readings, virtual conerts and art shows that they can&apos;t get anywhere else. Get 3BX for fans.</span>
+          </p>
+          <button className="button-orange mt-4">Learn more</button>
+        </div>
+        <div className='w-[70%] h-[60%] overflow-hidden'>
+          <video autoPlay loop muted className='min-w-[140%] origin-bottom-right'>
+            <source src="/3bx-movie.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
-
-    {/* Submit Form */}
-    <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] mt-10 ml-20">
-      <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
-      <form>
-
-        <div className="flex justify-between mb-2">
-          <label htmlFor="firstName" className="block text-sm font-bold">Legal First Name</label>
-          <label htmlFor="middleName" className="block text-sm font-bold">Middle Name (optional)</label>
-          <label htmlFor="lastName" className="block text-sm font-bold">Legal Last Name</label>
-        </div>
-
-        <div className="flex justify-between mb-4 gap-2">
-          <input type="text" id="firstName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="middleName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="lastName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-
-        <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
-
-        <div className="mb-4 flex justify-between items-center">
-          <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-
-        <div className="flex justify-end mt-auto">
-          <button type="submit" className="button-custom font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Subscribe
-          </button>
-        </div>
-      </form>
     </div>
-  </div>
-);
+  );
 };
 
 export default PageFive;
