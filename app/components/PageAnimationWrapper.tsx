@@ -23,7 +23,7 @@ const PageAnimationWrapper: React.FC<PageAnimationWrapperProps> = ({ children })
     setTimeout(() => (isScrollingRef.current = false), 1000);
 
     let newSection = currentSectionRef.current;
-    if (direction === 'down' && newSection < 4) {
+    if (direction === 'down' && newSection < 5) {
       newSection++;
     } else if (direction === 'up' && newSection > 0) {
       newSection--;
