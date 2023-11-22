@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FROM Global*/
+@font-face {
+  font-family: work-sans;
+  src: url('../public/WorkSans-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: work-sans;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+input, textarea, select {
+  @apply bg-bgc text-original rounded border-4 border-lbgc focus:outline-none focus:border-2 focus:border-lbgc;
+}
+
+.shadow-custom {
+  box-shadow: 4px 4px 0 #108CFF;
+}
+
+.button-custom {
+  @apply font-semibold border-2 p-2 min-w-max rounded-sm shadow-custom hover:-translate-y-1 hover:text-highlight-dark transition duration-200;
+} 
+
+.button-orange {
+  @apply text-original-dark bg-highlight font-semibold border-2 p-2 px-16 min-w-max rounded-sm hover:-translate-y-1 transition duration-200;
+} 
+

@@ -1,0 +1,79 @@
+.full-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+.body .paragraph {
+    color: #FC7A03;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.take-off-btn {
+    border: 2px solid #FFFDFA;
+    color: #FFFDFA;
+    background-color: #FC7A03;
+    padding: 10px 40px;
+    border-radius: 5px;
+    justify-self: center;
+    width:fit-content;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.full-container .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-left: -50px;
+}
+
+.right-side .blurbs {
+    background: white;
+    height: 100px;
+    width: 350px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(22, 22, 233, 0.596);
+    border: 1px solid #000041;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0 50px -150px;
+    z-index: 1;
+    position: relative;
+}
+.blurb-first, .blurb-second, .blurb-third {
+    display: none;
+}
+.blurb-first p, .blurb-second p, .blurb-third p {
+    text-align: justify;
+    padding: 0 25px;
+    color: #000041;
+}
+.blurb-first span, .blurb-second span, .blurb-third span {
+    font-weight: bold;
+    color: #FC7A03;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
