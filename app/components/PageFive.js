@@ -26,7 +26,7 @@ const PageFive = () => {
         <div className="flex flex-col justify-center items-center w-[50%] ml-10 phone:items-center phone:w-full">
           <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">Now Fans Get To Choose!!!</p>
           <p className='flex flex-col'>
-            <span>On 3BX, fans of indie authors, animators, musicians, and artists can get fresh-off-the-press, exclusive access to creations, private book readings, virtual concerts, and art shows that they can't get anywhere else. Get 3BX for fans.</span>
+            <span>On 3BX, fans of indie authors, animators, musicians, and artists can get fresh-off-the-press, exclusive access to creations, private book readings, virtual concerts, and art shows that they can&apos;t get anywhere else. Get 3BX for fans.</span>
           </p>
           <button className="button-orange mt-4">Learn more</button>
         </div>

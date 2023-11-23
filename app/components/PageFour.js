@@ -29,7 +29,7 @@ const PageFour = () => {
         <div className="flex flex-col justify-center items-end w-[50%] mr-10 phone:items-center phone:w-full">
           <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">Show Us What You See</p>
           <p className='flex flex-col'>
-            <span>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn't seem so wonderful at all.&quot;</span>
+            <span>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn&apos;t seem so wonderful at all.&quot;</span>
             <span>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</span>
             <span>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</span>
           </p>
