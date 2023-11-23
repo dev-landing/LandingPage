@@ -93,11 +93,11 @@ const PageOne = () => {
     }}>
       <div className='full-container'>
         <div className='left-side'>
-          <div className='body'>
+          <div className='body phone:text-center leading-tight'>
             <p className='paragraph'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
-            <p className='mobile-only mt-10'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
+            <p className='mobile-only mt-10 text-lg'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
           </div>
-          <button className='button-orange mt-20'>Get Ready for Take Off!</button>
+          <button className='button-orange mt-20'>Get Ready for Take Off</button>
         </div>
         <div className='right-side'>
           <Image src={RocketShip} alt='page 1 rocket ship' />
