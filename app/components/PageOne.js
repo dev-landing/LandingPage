@@ -97,7 +97,7 @@ const PageOne = () => {
             <p className='paragraph'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
             <p className='mobile-only mt-10'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
           </div>
-          <div className='button-orange mt-20'>Get Ready for Take Off!</div>
+          <button className='button-orange mt-20'>Get Ready for Take Off!</button>
         </div>
         <div className='right-side'>
           <Image src={RocketShip} alt='page 1 rocket ship' />

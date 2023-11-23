@@ -12,13 +12,13 @@ const PageSix = () => {
       backgroundColor: '#000041' 
     }}>
       {/* Gray banner */}
-      <div className="flex justify-center gap-12 bg-inactive w-full h-36 py-4 mt-20">
+      <div className="flex justify-center gap-12 phone:gap-4 bg-inactive w-full h-36 phone:h-40 py-4 mt-20">
         <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
-        <p className="w-[45%] pt-8"><span className="font-semibold">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
+        <p className="w-[45%] pt-8 phone:pt-0 phone:text-sm"><span className="font-semibold ">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
       </div>
 
     {/* Submit Form */}
-    <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] mt-10 ml-20">
+    <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] phone:w-[90%] mt-10 ml-20 phone:ml-0">
       <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
       <form>
 
