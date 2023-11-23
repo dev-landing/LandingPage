@@ -22,18 +22,16 @@ const PageFour = () => {
       width: '100vw', 
       height: '100vh', 
     }}>
-      <div className="flex justify-between items-center w-[90%] gap-20 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
-        <div className='w-[70%] h-[60%] overflow-hidden'>
-          <video autoPlay loop muted className='min-w-[140%] origin-bottom-right'>
-            <source src="/head-gif-3bx.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="flex flex-col justify-center items-start w-[90%] ml-10">
-          <p className="text-highlight text-4xl font-semibold overflow-y-hidden">Show Us What You See</p>
+      <div className="flex phone:flex-col justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
+        <video autoPlay loop muted height={"auto"} width={"40%"} className="phone:w-full phone:-ml-5 phone:mt-2">
+          <source src="/head-gif-3bx.mp4" type="video/mp4" />
+        </video>
+        <div className="flex flex-col justify-center items-end w-[50%] mr-10 phone:items-center phone:w-full">
+          <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">Show Us What You See</p>
           <p className='flex flex-col'>
-            <span className='my-3'>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn&apos;t seem so wonderful at all.&quot;</span>
-            <span className='my-3'>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</span>
-            <span className='my-3'>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</span>
+            <span>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn't seem so wonderful at all.&quot;</span>
+            <span>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</span>
+            <span>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</span>
           </p>
           <button className="button-orange mt-4">Learn more</button>
         </div>
