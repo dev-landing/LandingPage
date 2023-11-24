@@ -20,7 +20,7 @@ const PageFive = () => {
         <div className="flex flex-col justify-center items-start phone:items-center w-1/2 phone:w-full ml-10 phone:ml-0 phone:mt-4">
           <p className="text-highlight phone:text-lg text-4xl mb-4 font-semibold overflow-visible">Now Fans Get To Choose!!!</p>
           <div className='text-center phone:text-sm'>
-            <p className='pb-2'>On 3BX, fans of indie authors, animators, musicians, and artists can get fresh-off-the-press, exclusive access to creations, private book readings, virtual concerts, and art shows that they can't get anywhere else. Get 3BX for fans.</p>
+            <p className='pb-2'>On 3BX, fans of indie authors, animators, musicians, and artists can get fresh-off-the-press, exclusive access to creations, private book readings, virtual concerts, and art shows that they can&apos;t get anywhere else. Get 3BX for fans.</p>
           </div>
           <button className="button-orange mt-10">Learn more</button>
         </div>
