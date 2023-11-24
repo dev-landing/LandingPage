@@ -26,6 +26,11 @@
     align-items: center;
     justify-content: center;
 }
+@media only screen and (max-width: 850px) {
+    .navbar .left-side {
+        margin-left: 0px;
+    }
+}
 
 .grid-icon {
     font-size: 60px;
@@ -42,6 +47,12 @@
 
 .search-bar {
     width: 350px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .search-bar {
+        display: none;
+    }
 }
 
 .navbar-container .right-side {
@@ -62,6 +73,12 @@
     border-radius: 5px;
     height: 35px;
     box-shadow: 5px 5px 0 #108CFF;
+}
+
+@media only screen and (max-width: 850px) {
+    .right-side .join {
+        display: none;
+    }
 }
 
 .side-menu-container {

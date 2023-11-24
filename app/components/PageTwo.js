@@ -2,18 +2,18 @@
 
 import React, {useLayoutEffect} from 'react';
 
-import {gsap} from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const PageTwo = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.to("div.rounded-s-full", {scrollTrigger: {trigger: "div.rounded-s-full", start: "5% bottom"}, x: 0, duration: 1.5});
+    gsap.to("#page-2-container", {scrollTrigger: {trigger: "#page-2-container", start: "5% bottom"}, x: 0, duration: 1.5});
   }, [])
 
   return (
-    <div className="flex justify-end items-center w-full h-screen">
+    <div id="page-2-container" className="flex justify-end items-center w-full h-screen">
       <div className="flex phone:flex-col justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
         <video autoPlay loop muted className="phone:w-full w-2/5 phone:-ml-5 phone:mt-2">
           <source src="/books.mp4" type="video/mp4" />

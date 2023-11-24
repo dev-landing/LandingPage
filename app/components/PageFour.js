@@ -4,14 +4,14 @@
 
 import React, {useLayoutEffect} from 'react';
 
-import {gsap} from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const PageFour = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.to("div.bg-gradient-to-b", {scrollTrigger: {trigger: "div.bg-gradient-to-b", start: "5% bottom"}, x: 0, duration: 1.5});
+    gsap.to("#page-4-container", {scrollTrigger: {trigger: "#page-4-container", start: "5% bottom"}, x: 0, duration: 1.5});
   }, [])
   
   return (
@@ -22,7 +22,7 @@ const PageFour = () => {
       width: '100vw', 
       height: '100vh', 
     }}>
-      <div className="flex phone:flex-col justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
+      <div id="page-4-container" className="flex phone:flex-col justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
         <video autoPlay loop muted height={"auto"} width={"40%"} className="phone:w-full phone:-ml-5 phone:mt-2">
           <source src="/head-gif-3bx.mp4" type="video/mp4" />
         </video>

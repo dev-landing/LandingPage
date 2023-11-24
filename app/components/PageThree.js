@@ -3,16 +3,16 @@
 
 import React, {useLayoutEffect} from 'react';
 
-import {gsap} from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const PageThree = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.to("div.bg-gradient-to-b", { scrollTrigger: { trigger: "div.bg-gradient-to-b", start: "5% bottom" }, x: 0, duration: 1.5 });
-  }, []);
-
+    gsap.to("#page-3-container", {scrollTrigger: {trigger: "#page-3-container", start: "5% bottom"}, x: 0, duration: 1.5});
+  }, [])
+  
   return (
     <div style={{ 
       display: 'flex',
@@ -21,7 +21,7 @@ const PageThree = () => {
       width: '100vw', 
       height: '100vh',
     }}>
-      <div className="flex phone:flex-col-reverse justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-e-full h-[75%] overflow-visible translate-x-[-2000px]">
+      <div id="page-3-container" className="flex phone:flex-col-reverse justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-e-full h-[75%] overflow-visible translate-x-[-2000px]">
         <div className="flex flex-col justify-center items-center w-[50%] ml-10 phone:items-center phone:w-full">
           <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">3BX is a Social Media Platform</p>
           <p className='flex flex-col'>

@@ -21,7 +21,7 @@ const PageSix = () => {
     <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] phone:w-[90%] mt-10 ml-20 phone:ml-0">
       <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
       <form>
-
+        
         <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
 
         <div className="mb-4 flex justify-between items-center">
@@ -34,8 +34,7 @@ const PageSix = () => {
           </button>
         </div>
       </form>
-
-      <h3 className="mt-3">By subscribing you agree to the <span className="text-cyan-500 hover:cursor-pointer">terms of use</span> and <span className="text-cyan-500 hover:cursor-pointer">privacy policy</span>.</h3>
+      <h4 className="mt-4">By subscribing you are agreeing to the <span className="text-cyan-500">terms of use</span> and <span className="text-cyan-500">privacy policy</span></h4>
     </div>
   </div>
 );

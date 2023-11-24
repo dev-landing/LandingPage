@@ -15,8 +15,8 @@ const PageOne = () => {
   useLayoutEffect(() => {
     const rocketship = window.document.querySelector('.full-container .right-side img');
 
-    gsap.to(rocketship, {x: 200, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
-    gsap.to(".blurbs", {x: 200, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to(rocketship, {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to(".blurbs", {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
   })
   
     useLayoutEffect(() => {
