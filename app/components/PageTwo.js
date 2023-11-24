@@ -13,27 +13,20 @@ const PageTwo = () => {
   }, [])
 
   return (
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      width: '100vw', 
-      height: '100vh', 
-    }}>
-      <div className="flex phone:flex-col justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
-        <video autoPlay loop muted height={"auto"} width={"40%"} className="phone:w-full phone:-ml-5 phone:mt-2">
+    <div className="flex justify-end items-center w-full h-screen">
+      <div className="flex phone:flex-col justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
+        <video autoPlay loop muted className="phone:w-full w-2/5 phone:-ml-5 phone:mt-2">
           <source src="/books.mp4" type="video/mp4" />
         </video>
-        <div className="flex flex-col justify-center items-end w-[50%] mr-10 phone:items-start phone:w-full">
-          <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">What&apos;s Your HERO Story?</p>
-          <p className='flex flex-col'>
-            <span >There are so many amazing stories that go untold. so many unique perspectives that break the mold.</span>
-            <span >Why not build an ecosystem where wordsmiths&apos; tales unfold, and share with the world your literary gold.&apos;</span>
-            <span >Fans link up with your favorite authors to add a copy of their limited edition content to your digital collection.</span>
-          </p>
+        <div className="flex flex-col justify-center items-end phone:items-center w-1/2 phone:w-full mr-10 phone:mr-0 phone:mt-4">
+          <p className="text-highlight phone:text-lg text-4xl mb-4 font-semibold overflow-visible">What&apos;s Your HERO Story?</p>
+          <div className='text-center phone:text-sm'>
+            <p className='pb-2'>There are so many amazing stories that go untold. so many unique perspectives that break the mold.</p>
+            <p className='pb-2'>Why not build an ecosystem where wordsmiths&apos; tales unfold, and share with the world your literary gold.</p>
+            <p className='pb-2'>Fans link up with your favorite authors to add a copy of their limited edition content to your digital collection.</p>
+          </div>
           <button className="button-orange mt-10">Get started for free</button>
         </div>
-        
       </div>
     </div>
   );

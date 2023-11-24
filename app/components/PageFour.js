@@ -11,29 +11,23 @@ const PageFour = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.to("div.bg-gradient-to-b", {scrollTrigger: {trigger: "div.bg-gradient-to-b", start: "5% bottom"}, x: 0, duration: 1.5});
-  }, [])
-  
+    gsap.to("div.rounded-s-full", { scrollTrigger: { trigger: "div.rounded-s-full", start: "5% bottom" }, x: 0, duration: 1.5 });
+  }, []);
+
   return (
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      width: '100vw', 
-      height: '100vh', 
-    }}>
-      <div className="flex phone:flex-col justify-center w-[90%] gap-14 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full h-[75%] overflow-visible translate-x-[2000px]">
-        <video autoPlay loop muted height={"auto"} width={"40%"} className="phone:w-full phone:-ml-5 phone:mt-2">
+    <div className="flex justify-end items-center w-full h-screen">
+      <div className="flex phone:flex-col justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
+        <video autoPlay loop muted className="phone:w-full w-2/5 phone:-ml-5 phone:mt-2">
           <source src="/head-gif-3bx.mp4" type="video/mp4" />
         </video>
-        <div className="flex flex-col justify-center items-end w-[50%] mr-10 phone:items-center phone:w-full">
-          <p className="text-highlight phone:text-2xl text-4xl mb-4 font-semibold overflow-y-hidden">Show Us What You See</p>
-          <p className='flex flex-col'>
-            <span>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn&apos;t seem so wonderful at all.&quot;</span>
-            <span>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</span>
-            <span>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</span>
-          </p>
-          <button className="button-orange mt-4">Learn more</button>
+        <div className="flex flex-col justify-center items-end phone:items-center w-1/2 phone:w-full mr-10 phone:mr-0 phone:mt-4">
+          <p className="text-highlight phone:text-lg text-4xl mb-4 font-semibold overflow-visible">Show Us What You See</p>
+          <div className='text-center phone:text-sm'>
+            <p className='pb-2'>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn&apos;t seem so wonderful at all.&quot;</p>
+            <p className='pb-2'>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</p>
+            <p className='pb-2'>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</p>
+          </div>
+          <button className="button-orange mt-10">Learn more</button>
         </div>
       </div>
     </div>
