@@ -22,18 +22,6 @@ const PageSix = () => {
       <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
       <form>
 
-        <div className="flex justify-between mb-2">
-          <label htmlFor="firstName" className="block text-sm font-bold">Legal First Name</label>
-          <label htmlFor="middleName" className="block text-sm font-bold">Middle Name (optional)</label>
-          <label htmlFor="lastName" className="block text-sm font-bold">Legal Last Name</label>
-        </div>
-
-        <div className="flex justify-between mb-4 gap-2">
-          <input type="text" id="firstName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="middleName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="lastName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-
         <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
 
         <div className="mb-4 flex justify-between items-center">
@@ -46,6 +34,8 @@ const PageSix = () => {
           </button>
         </div>
       </form>
+
+      <h3 className="mt-3">By subscribing you agree to the <span className="text-cyan-500 hover:cursor-pointer">terms of use</span> and <span className="text-cyan-500 hover:cursor-pointer">privacy policy</span>.</h3>
     </div>
   </div>
 );
