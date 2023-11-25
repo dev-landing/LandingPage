@@ -13,8 +13,8 @@ const PageTwo = () => {
   }, [])
 
   return (
-    <div id="page-2-container" className="flex justify-end items-center w-full h-screen">
-      <div className="flex phone:flex-col justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
+    <div className="flex justify-end items-center w-full h-screen">
+      <div id="page-2-container" className="flex phone:flex-col justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
         <video autoPlay loop muted className="phone:w-full w-2/5 phone:-ml-5 phone:mt-2">
           <source src="/books.mp4" type="video/mp4" />
         </video>
