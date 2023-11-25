@@ -91,7 +91,7 @@ const PageOne = () => {
       width: '100vw', 
       height: '100vh', 
     }}>
-      <div className='full-container'>
+      <div className='flex flex-row w-screen h-screen overflow-hidden'>
         <div className='left-side'>
           <div className='body phone:text-center leading-tight'>
             <p className='paragraph'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
