@@ -4,19 +4,19 @@
 
 import React, {useLayoutEffect} from 'react';
 
-import {gsap} from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const PageFive = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    gsap.to("div.rounded-e-full", { scrollTrigger: { trigger: "div.rounded-e-full", start: "5% bottom" }, x: 0, duration: 1.5 });
+    gsap.to("#page-5-container", { scrollTrigger: { trigger: "#page-5-container", start: "5% bottom" }, x: 0, duration: 1.5 });
   }, []);
 
   return (
     <div className="flex justify-start items-center w-full h-screen">
-      <div className="flex phone:flex-col-reverse justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-e-full overflow-visible translate-x-[-2000px] h-4/5">
+      <div id="page-5-container" className="flex phone:flex-col-reverse justify-center items-center w-11/12 gap-14 phone:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-e-full overflow-visible translate-x-[-2000px] h-4/5">
         <div className="flex flex-col justify-center items-start phone:items-center w-1/2 phone:w-full ml-10 phone:ml-0 phone:mt-4">
           <p className="text-highlight phone:text-lg text-4xl mb-4 font-semibold overflow-visible">Now Fans Get To Choose!!!</p>
           <div className='text-center phone:text-sm'>

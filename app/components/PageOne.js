@@ -15,8 +15,8 @@ const PageOne = () => {
   useLayoutEffect(() => {
     const rocketship = window.document.querySelector('.full-container .right-side img');
 
-    gsap.to(rocketship, {x: 200, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
-    gsap.to(".blurbs", {x: 200, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to(rocketship, {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to(".blurbs", {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
   })
   
     useLayoutEffect(() => {
@@ -91,7 +91,7 @@ const PageOne = () => {
       width: '100vw', 
       height: '100vh', 
     }}>
-      <div className='full-container'>
+      <div className='flex flex-row w-screen h-screen overflow-hidden'>
         <div className='left-side'>
           <div className='body phone:text-center leading-tight'>
             <p className='paragraph'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>

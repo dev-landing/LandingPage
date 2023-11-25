@@ -18,35 +18,33 @@ const PageSix = () => {
       </div>
 
     {/* Submit Form */}
-    <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] phone:w-[90%] mt-10 ml-20 phone:ml-0">
-      <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
-      <form>
 
-        <div className="flex justify-between mb-2">
-          <label htmlFor="firstName" className="block text-sm font-bold">Legal First Name</label>
-          <label htmlFor="middleName" className="block text-sm font-bold">Middle Name (optional)</label>
-          <label htmlFor="lastName" className="block text-sm font-bold">Legal Last Name</label>
-        </div>
+    <div className="flex flex-row items-center justify-center mt-48">
+      
+      <h1 className="text-6xl overflow-hidden font-bold">Be <span style={{background: "-webkit-linear-gradient(360deg, orange, blue)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"}}>first</span> to hear about our drops <span className="text-sky-600 text-8xl">.</span></h1>
 
-        <div className="flex justify-between mb-4 gap-2">
-          <input type="text" id="firstName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="middleName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-          <input type="text" id="lastName" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
 
-        <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
+      <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-[50%] phone:w-[90%] mt-10 ml-20 phone:ml-0">
+        <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
+        <form>
+          
+          <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
 
-        <div className="mb-4 flex justify-between items-center">
-          <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
+          <div className="mb-4 flex justify-between items-center">
+            <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
+          </div>
 
-        <div className="flex justify-end mt-auto">
-          <button type="submit" className="button-custom font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Subscribe
-          </button>
-        </div>
-      </form>
+          <div className="flex justify-end mt-auto">
+            <button type="submit" className="button-custom font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Subscribe
+            </button>
+          </div>
+        </form>
+        <h4 className="mt-4">By subscribing you are agreeing to the <span className="text-cyan-500">terms of use</span> and <span className="text-cyan-500">privacy policy</span></h4>
+      </div>
+
     </div>
+    
   </div>
 );
 };
