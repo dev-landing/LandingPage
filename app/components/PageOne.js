@@ -7,21 +7,18 @@ import React, {useLayoutEffect, useState} from 'react';
 // !svgs
 import RocketShip from '../svg/page-1-rocket.svg';
 
-// !CSS
-import './css/page-one.css';
-
 const PageOne = () => {
 
   useLayoutEffect(() => {
-    const rocketship = window.document.querySelector('.full-container .right-side img');
+    const rocketship = window.document.querySelector('#rocketship');
 
-    gsap.to(rocketship, {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
-    gsap.to(".blurbs", {x: 150, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to(rocketship, {x: 25, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
+    gsap.to("#blurbs", {x: 25, repeat: -1, duration: 3, ease: 'ease-in-out', yoyoEase: true})
   })
   
     useLayoutEffect(() => {
       const tl = gsap.timeline({repeat: -1, repeatRefresh: true});
-      tl.to(".blurbs .blurb-first", {display: 'block', duration: 5}).to(".blurbs .blurb-first", {display: 'none'}).to(".blurbs .blurb-second", {display: "block", duration: 5}).to(".blurbs .blurb-second", {display: 'none'}).to(".blurbs .blurb-third", {display: "block", duration: 5}).to(".blurbs .blurb-third", {display: "none"});
+      tl.to("#blurb-first", {display: 'block', duration: 10}).to("#blurb-first", {display: 'none'}).to("#blurb-second", {display: "block", duration: 10}).to("#blurb-second", {display: 'none'}).to("#blurb-third", {display: "block", duration: 10}).to("#blurb-third", {display: "none"});
     }, [])
 
     useLayoutEffect(() => {
@@ -92,28 +89,28 @@ const PageOne = () => {
       height: '100vh', 
     }}>
       <div className='flex flex-row w-screen h-screen overflow-hidden'>
-        <div className='left-side'>
-          <div className='body phone:text-center leading-tight'>
-            <p className='paragraph'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
-            <p className='mobile-only mt-10 text-lg'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
+        <div className='flex flex-col w-auto justify-center ml-[15%] mx-4 sm:w-[100%] sm:mx-4 sm:my-auto sm:items-center sm:text-center'>
+          <div className='sm:text-center leading-tight'>
+            <p className='paragraph text-[#FC7A03] font-bold text-3xl'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
+            <p className='hidden sm:block mt-10 text-lg'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
           </div>
-          <button className='button-orange mt-20'>Get Ready for Take Off</button>
+          <button className='button-orange px-10 py-3 w-fit mt-[30px]'>Get Ready for Take Off</button>
         </div>
-        <div className='right-side'>
-          <Image src={RocketShip} alt='page 1 rocket ship' />
-          <div className='blurbs'>
-            <div className='blurb-first'>
-              <p className='first'>What&apos;s up my friend? Welcome to <span>Books Beats Box</span> of <span>3BX</span></p>
+        <div className='flex flex-row items-center justify-center w-full ml-[50px] sm:hidden'>
+          <Image src={RocketShip} id="rocketship" alt='page 1 rocket ship' />
+          <div id='blurbs' className='bg-white h-[100px] w-[350px] rounded-bl-full rounded-r-full shadow-[5px_5px_5px_rgba(22,22,233,0.596)] flex items-center justify-center mt-[100px] ml-[-150px] z-[1]'>
+            <div id='blurb-first' className='hidden'>
+              <p className='text-justify text-[#000041] px-4'>What&apos;s up my friend? Welcome to <span className='font-bold text-[#FC7A03]'>Books Beats Box</span> of <span className='font-bold text-[#FC7A03]'>3BX</span></p>
             </div>
-            <div className='blurb-second'>
-              <p className='second'>Explore the <span>3BX Universe</span> to find the most out of this world content</p>
+            <div id='blurb-second' className='hidden'>
+              <p className='text-justify text-[#000041] px-4'>Explore the <span className='font-bold text-[#FC7A03]'>3BX Universe</span> to find the most out of this world content</p>
             </div>
-            <div className='blurb-third'>
-              <p className='third'>or use the <span>Books Beats Box</span> launchpad to blast off your <span>Indie Career</span></p>
+            <div id='blurb-third' className='hidden'>
+              <p className='text-justify text-[#000041] px-4'>or use the <span className='font-bold text-[#FC7A03]'>Books Beats Box</span> launchpad to blast off your <span className='font-bold text-[#FC7A03]'>Indie Career</span></p>
             </div>
           </div>
         </div>
-        <canvas id="starsCanvas"></canvas>
+        <canvas id="starsCanvas" className='absolute top-0 left-0 w-full h-full z-[-1]'></canvas>
       </div>
     </div>
   );
