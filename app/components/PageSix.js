@@ -19,17 +19,17 @@ const handleSubmit = (event) => {
   return (
     <div className="flex flex-col items-center justify-start w-full h-screen bg-[#000041]">
       {/* Gray banner */}
-      <div className="flex justify-center gap-12 sm:gap-4 bg-inactive w-full h-36 sm:h-40 py-4 mt-20">
+      <div className="flex justify-center align-middle gap-12 sm:gap-4 bg-inactive w-full h-36 sm:h-40 py-4 mt-20 ">
         <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
-        <p className="w-[45%] pt-8 sm:pt-0 sm:text-sm"><span className="font-semibold ">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
+        <p className="w-[60%] pt-2 text-sm text-center"><span className="font-semibold ">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
       </div>
 
       {/* Submit Form */}
-      <div className="flex flex-row phone:flex-col items-center justify-center w-[90%] mt-48">
-        <p className="text-6xl font-bold overflow-hidden">Be <span className="bg-gradient-to-r from-orange-400 to-blue-600 bg-clip-text text-transparent">
-          first </span> to hear about our drops <span className="text-sky-600 text-8xl">.</span></p>
+      <div className="flex flex-row sm:flex-col items-center justify-center w-[90%] p-2 h-full mt-4">
+        <p className="text-6xl sm:text-4xl font-bold overflow-hidden">Be <span className="bg-gradient-to-r from-orange-400 to-blue-600 bg-clip-text text-transparent">
+          first </span> to hear about our drops <span className="text-sky-600 text-8xl sm:text-3xl">.</span></p>
 
-        <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg md:w-1/2 lg:w-1/2 w-9/10 mt-10 ml-20 phone:ml-0">
+        <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-full mt-10 sm:ml-0 ml-20 phone:ml-0">
           <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
           <form method="POST" action="https://zmp-glf.maillist-manage.com/weboptin.zc" target="_zcSignup" onSubmit={handleSubmit}>
 
@@ -64,7 +64,7 @@ const handleSubmit = (event) => {
                   </button>
                 </div>
           </form>
-          <h4 className="mt-4">
+          <h4 className="mt-4 text-sm">
             By subscribing you are agreeing to the 
             <span className="text-cyan-500"> terms of use</span> and <span className="text-cyan-500"> privacy policy</span>
           </h4>
