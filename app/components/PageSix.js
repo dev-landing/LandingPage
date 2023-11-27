@@ -19,12 +19,9 @@ const handleSubmit = (event) => {
   return (
     <div className="flex flex-col items-center justify-start w-full h-screen bg-[#000041]">
       {/* Gray banner */}
-      <div className="flex justify-center gap-12 phone:gap-4 bg-inactive w-full h-36 phone:h-40 py-4 mt-20">
-        <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130} />
-        <p className="w-[45%] pt-8 phone:pt-0 phone:text-sm">
-          <span className="font-semibold">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;
-          <span className="font-semibold">Be inspired - Be engaged - Be empowered...</span>
-        </p>
+      <div className="flex justify-center gap-12 sm:gap-4 bg-inactive w-full h-36 sm:h-40 py-4 mt-20">
+        <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
+        <p className="w-[45%] pt-8 sm:pt-0 sm:text-sm"><span className="font-semibold ">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
       </div>
 
       {/* Submit Form */}
