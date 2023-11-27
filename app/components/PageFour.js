@@ -16,8 +16,8 @@ const PageFour = () => {
 
   return (
     <div className="flex justify-end items-center w-full h-screen">
-      <div id="page-4-container" className="flex sm:flex-col justify-center items-center w-11/12 gap-14 sm:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5">
-        <video autoPlay loop muted className="sm:w-full w-2/5 sm:-ml-5 sm:mt-2">
+      <div id="page-4-container" className="flex sm:flex-col justify-center items-center w-11/12 gap-14 sm:gap-2 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible translate-x-[2000px] h-4/5 sm:w-full sm:px-[5%]">
+        <video autoPlay loop muted className="sm:w-full w-2/5 sm:mt-2">
           <source src="/head-gif-3bx.mp4" type="video/mp4" />
         </video>
         <div className="flex flex-col justify-center items-end sm:items-center w-1/2 sm:w-full mr-10 sm:mr-0 sm:mt-4">

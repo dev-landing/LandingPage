@@ -46,7 +46,7 @@ const Nav = () => {
         <div className="container">
             <header className="fixed top-0 w-screen z-[2]">
                 <nav className="bg-[#000041] flex items-center justify-around">
-                    <div className="flex flex-row w-[250px] ml-[70px] text-[#FFFDFA] items-center justify-center sm:ml-0">
+                    <div className="flex flex-row w-[250px] ml-[70px] text-[#FFFDFA] items-center justify-center sm:ml-0 sm:w-screen">
                         <div className="text-[60px] items-center flex ml-[-30px] mr-[10px] overflow-hidden hover:cursor-pointer" onClick={() => {
                             if(!isOpen) {
                                 setIsOpen(true); var timeline = gsap.timeline(); timeline.to("#side-menu-background", {left: 0, duration: 0.3}).to("#side-menu", {left: 0, duration: 0.3});
@@ -61,9 +61,9 @@ const Nav = () => {
                     <div className="w-[350px] xl:hidden">
                         <Search placeholder="Search" />
                     </div>
-                    <div className="flex justify-around w-[250px] h-[40px]">
+                    <div className="flex justify-around w-[250px] h-[40px] sm:hidden">
                         <button className="bg-[#000041] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Sign In!</button>
-                        <button className="bg-[#FC7A03] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF] sm:hidden">Join</button>
+                        <button className="bg-[#FC7A03] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Join</button>
                     </div>
                 </nav>
             </header>
