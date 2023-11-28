@@ -66,7 +66,7 @@ const handleSubmit = (event) => {
           </form>
           <h4 className="mt-4 text-sm">
             By subscribing you are agreeing to the 
-            <span className="text-cyan-500"> terms of use</span> and <span className="text-cyan-500"> privacy policy</span>
+            <span className="text-cyan-500 hover:cursor-pointer" onClick={() => location.href="https://agreements.3bx.live/agreements/ToS.pdf"}> terms of use</span> and <span className="text-cyan-500 hover:cursor-pointer" onClick={() => location.href="https://agreements.3bx.live/agreements/Privacy.pdf"}> privacy policy</span>
           </h4>
         </div>
       </div>

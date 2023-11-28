@@ -22,7 +22,7 @@ const PageFour = () => {
         </video>
         <div className="flex flex-col justify-center items-end sm:items-center w-1/2 sm:w-full mr-10 sm:mr-0 sm:mt-4">
           <p className="text-highlight sm:text-lg text-4xl mb-4 font-semibold overflow-visible">Show Us What You See</p>
-          <div className='text-center sm:text-sm'>
+          <div className='text-right sm:text-sm'>
             <p className='pb-2'>Michelangelo once said that &quot;if people knew how hard I worked to get my mastery, it wouldn&apos;t seem so wonderful at all.&quot;</p>
             <p className='pb-2'>Artists!!! Surround yourself with inspirational people and ideas that will accelerate your mastery, EXPEDITIOUSLY.</p>
             <p className='pb-2'>Allowing fans to become members of an exclusive art gallery, the likes of which have never been seen.</p>

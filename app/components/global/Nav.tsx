@@ -62,8 +62,8 @@ const Nav = () => {
                         <Search placeholder="Search" />
                     </div>
                     <div className="flex justify-around w-[250px] h-[40px] sm:hidden">
-                        <button className="bg-[#000041] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Sign In!</button>
-                        <button className="bg-[#FC7A03] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Join</button>
+                        <button onClick={() => location.href="https://login.3bx.live"} className="bg-[#000041] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Sign In!</button>
+                        <button onClick={() => location.href="https://register.3bx.live"} className="bg-[#FC7A03] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Join</button>
                     </div>
                 </nav>
             </header>
@@ -77,17 +77,17 @@ const Nav = () => {
                     <div className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={InfoIcon} alt='info icon' className="ml-[6px]"/><h3 className="ml-[15px]">About 3BX</h3></div>
                 </div>
                 <div className="border-t-[1px] border-t-[silver] w-[80%] self-center flex flex-col">
-                    <div className="flex flex-row mt-[50px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Support</h3></div>
-                    <div className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Register</h3></div>
-                    <div className="border-[2px] border-[#000041] rounded-[5px] w-fit p-[10px] mt-[15px] ml-[5px] font-bold shadow-[3px_3px_0_#108CFF] hover:cursor-pointer hover:text-[#FFFDFA] hover:underline hover:bg-[#000041]"><h3>Sign In!</h3></div>
+                    <div><Link href="https://support.3bx.live" className="flex flex-row mt-[50px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Support</h3></Link></div>
+                    <div><Link href="https://register.3bx.live"  className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Register</h3></Link></div>
+                    <div className="border-[2px] border-[#000041] rounded-[5px] w-fit p-[10px] mt-[15px] ml-[5px] font-bold shadow-[3px_3px_0_#108CFF] hover:cursor-pointer hover:text-[#FFFDFA] hover:underline hover:bg-[#000041]"><Link href="https://login.3bx.live"><h3>Sign In!</h3></Link></div>
                 </div>
                 <div className="flex flex-row justify-evenly mb-[100px] overflow-hidden items-center h-[100px]">
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={FacebookIcon} alt='facebook icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={InstagramIcon} alt='instagram icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={TwitterIcon} alt='twitter icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={TiktokIcon} alt='tiktok icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={LinkedinIcon} alt='linkedin icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer"><Image src={YoutubeIcon} alt='youtube icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.facebook.com/profile.php?id=100091576004576"}><Image src={FacebookIcon} alt='facebook icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.instagram.com/booksbeatsbox/"}><Image src={InstagramIcon} alt='instagram icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://twitter.com/booksbeatsbox"}><Image src={TwitterIcon} alt='twitter icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.tiktok.com/@booksbeatsbox?lang=en"}><Image src={TiktokIcon} alt='tiktok icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.linkedin.com/company/3bx"}><Image src={LinkedinIcon} alt='linkedin icon' className="h-[40px] w-[40px]"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.youtube.com/@3bx-booksbeatsbox"}><Image src={YoutubeIcon} alt='youtube icon' className="h-[40px] w-[40px]"/></div>
                 </div>
             </div>
             <div id="side-menu-background" className="w-[415px] fixed left-[-415px] top-[0] h-screen bg-[#FC7A03] rounded-[15px] z-[2] "></div>

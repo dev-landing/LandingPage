@@ -20,7 +20,7 @@ const PageTwo = () => {
         </video>
         <div className="flex flex-col justify-center items-end sm:items-center w-1/2 sm:w-full mr-10 sm:mr-0 sm:mt-4">
           <p className="text-highlight sm:text-lg text-4xl mb-4 font-semibold overflow-visible">What&apos;s Your HERO Story?</p>
-          <div className='text-center sm:text-sm'>
+          <div className='text-right sm:text-sm'>
             <p className='pb-2'>There are so many amazing stories that go untold. so many unique perspectives that break the mold.</p>
             <p className='pb-2'>Why not build an ecosystem where wordsmiths&apos; tales unfold, and share with the world your literary gold.</p>
             <p className='pb-2'>Fans link up with your favorite authors to add a copy of their limited edition content to your digital collection.</p>
