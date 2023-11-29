@@ -72,10 +72,20 @@ const Nav = () => {
                     <div className="text-[25px] text-[#000041] font-bold absolute top-[15px]"><h3>MENU</h3></div>
                     <div className="absolute top-[15px] right-[50px] hover:cursor-pointer" onClick={() => {setIsOpen(false); var timeline = gsap.timeline(); timeline.to("#side-menu", {left: -400, duration: 0.3}).to("#side-menu-background", {left: -415, duration: 0.3}); }}><CloseIcon fontSize="large" /></div>
                 </div>
+                
                 <div className="text-[30px] flex flex-col ml-[50px]">
-                    <div className="flex flex-row items-baseline hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={HouseIcon} alt='house icon' className="self-start"/><h3 className="ml-[8px] mt-[5px]">Home</h3></div>
-                    <div className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={InfoIcon} alt='info icon' className="ml-[6px]"/><h3 className="ml-[15px]">About 3BX</h3></div>
+                    <a href="https://booksbeatsbox.com" className="flex flex-row items-baseline hover:cursor-pointer hover:text-[#FC7A03] hover:underline">
+                        <Image src={HouseIcon} alt='house icon' className="self-start"/>
+                        <h3 className="ml-[8px] mt-[5px]">Home</h3>
+                    </a>
+                    <Link href="/about-3bx">
+                        <div className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline">
+                            <Image src={InfoIcon} alt='info icon' className="ml-[6px]"/>
+                            <h3 className="ml-[15px]">About 3BX</h3>
+                        </div>
+                    </Link>
                 </div>
+
                 <div className="border-t-[1px] border-t-[silver] w-[80%] self-center flex flex-col">
                     <div><Link href="https://support.3bx.live" className="flex flex-row mt-[50px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Support</h3></Link></div>
                     <div><Link href="https://register.3bx.live"  className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Register</h3></Link></div>
