@@ -81,37 +81,29 @@ const PageOne = () => {
     }, [])
 
   return (
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100vw', 
-      height: '100vh', 
-    }}>
-      <div className='flex flex-row w-screen h-screen overflow-hidden'>
-        <div className='flex flex-col w-auto justify-center ml-[15%] mx-4 sm:w-[100%] sm:mx-4 sm:my-auto sm:items-center sm:text-center'>
-          <div className='sm:text-center leading-tight'>
-            <p className='paragraph text-[#FC7A03] font-bold text-3xl'>The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
-            <p className='hidden sm:block mt-10 text-lg'>Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
-          </div>
-          <button className='button-orange px-10 py-3 w-fit mt-[30px]'>Get Ready for Take Off</button>
+    <div className="flex justify-center items-center w-full h-screen">
+      <div className="flex flex-col items-center justify-center mx-4 my-auto text-center lg:text-start lg:flex-row lg:justify-start lg:w-auto lg:ml-20">
+        <div>
+          <p className="paragraph text-highlight font-bold text-3xl lg:text-4xl py-2 lg:text-left">The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
+          <p className="mt-10 text-lg lg:hidden">Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
+          <button className="button-orange px-10 py-3 mt-8 lg:mt-10" aria-label="Get ready for takeoff">Get Ready for Take Off</button>
         </div>
-        <div className='flex flex-row items-center justify-center w-full ml-[50px] sm:hidden'>
-          <Image src={RocketShip} id="rocketship" alt='page 1 rocket ship' />
-          <div id='blurbs' className='bg-white h-[100px] w-[350px] rounded-bl-full rounded-r-full shadow-[5px_5px_5px_rgba(22,22,233,0.596)] flex items-center justify-center mt-[100px] ml-[-150px] z-[1]'>
-            <div id='blurb-first' className='hidden'>
-              <p className='text-justify text-[#000041] px-4'>What&apos;s up my friend? Welcome to <span className='font-bold text-[#FC7A03]'>Books Beats Box</span> of <span className='font-bold text-[#FC7A03]'>3BX</span></p>
+        <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:w-full lg:ml-12">
+          <Image src={RocketShip} id="rocketship" alt="Illustration of a rocket ship" />
+          <div id="blurbs" className="bg-original-dark h-28 w-96 rounded-bl-full rounded-r-full shadow-lg flex items-center justify-center mt-10 ml-[-9rem] mr-6 z-10">
+            <div id="blurb-first" className="hidden">
+              <p className="text-justify text-original px-4">What&apos;s up my friend? Welcome to <span className="font-bold text-highlight">Books Beats Box</span> of <span className="font-bold text-highlight">3BX</span></p>
             </div>
-            <div id='blurb-second' className='hidden'>
-              <p className='text-justify text-[#000041] px-4'>Explore the <span className='font-bold text-[#FC7A03]'>3BX Universe</span> to find the most out of this world content</p>
+            <div id="blurb-second" className="hidden">
+              <p className="text-justify text-original px-4">Explore the <span className="font-bold text-highlight">3BX Universe</span> to find the most out of this world content</p>
             </div>
-            <div id='blurb-third' className='hidden'>
-              <p className='text-justify text-[#000041] px-4'>or use the <span className='font-bold text-[#FC7A03]'>Books Beats Box</span> launchpad to blast off your <span className='font-bold text-[#FC7A03]'>Indie Career</span></p>
+            <div id="blurb-third" className="hidden">
+              <p className="text-justify text-original px-4">or use the <span className="font-bold text-highlight">Books Beats Box</span> launchpad to blast off your <span className="font-bold text-highlight">Indie Career</span></p>
             </div>
           </div>
         </div>
-        <canvas id="starsCanvas" className='absolute top-0 left-0 w-full h-full z-[-1]'></canvas>
       </div>
+      <canvas id="starsCanvas" className="absolute top-0 left-0 w-full h-full z-[-1]" aria-hidden="true"></canvas>
     </div>
   );
 };
