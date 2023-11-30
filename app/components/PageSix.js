@@ -16,20 +16,20 @@ const handleSubmit = (event) => {
 };
 
 
-  return (
-    <div className="flex flex-col items-center justify-start w-full h-screen bg-[#000041]">
-      {/* Gray banner */}
-      <div className="flex justify-center align-middle gap-12 sm:gap-4 bg-inactive w-full h-36 sm:h-40 py-4 mt-20 ">
-        <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
-        <p className="w-[60%] pt-2 text-sm text-center"><span className="font-semibold ">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
-      </div>
+return (
+  <div className="flex flex-col items-center justify-start w-full h-screen bg-[#000041]">
+    {/* Gray banner */}
+    <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start bg-inactive w-full h-64 sm:h-40 py-2 mt-20">
+      <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
+      <p className="w-[90%] sm:w-[60%] pt-2 text-sm text-center sm:text-left"><span className="font-semibold">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
+    </div>
 
-      {/* Submit Form */}
-      <div className="flex flex-row sm:flex-col items-center justify-center w-[90%] p-2 h-full mt-4">
-        <p className="text-6xl sm:text-4xl font-bold overflow-hidden">Be <span className="bg-gradient-to-r from-orange-400 to-blue-600 bg-clip-text text-transparent">
-          first </span> to hear about our drops <span className="text-sky-600 text-8xl sm:text-3xl">.</span></p>
+    {/* Submit Form */}
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-[90%] p-2 h-full mt-4">
+      <p className="text-4xl lg:text-6xl font-bold overflow-hidden text-center lg:text-left">Be <span className="bg-gradient-to-r from-orange-400 to-blue-600 bg-clip-text text-transparent">
+        first </span> to hear about our drops <span className="text-sky-600 text-3xl lg:text-8xl">.</span></p>
 
-        <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-full mt-10 sm:ml-0 ml-20 phone:ml-0">
+      <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-full lg:max-w-md mt-10">
           <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
           <form method="POST" action="https://zmp-glf.maillist-manage.com/weboptin.zc" target="_zcSignup" onSubmit={handleSubmit}>
 
