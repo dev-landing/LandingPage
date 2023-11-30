@@ -21,7 +21,7 @@ const PageThree = () => {
           <div className='text-center lg:text-left text-sm w-[90%]'>
             <p className='pb-2'>On 3BX, you can meet your fans and collaborate with other creatives with ease.</p>
             <p className='pb-2'>Unlike other social media platforms, 3BX employs Know Your Customer (KYC) to verify user identities.</p>
-            <p className='pb-2'>Skip social media platforms that leave you guessing who's behind the computer: Get 3BX.</p>
+            <p className='pb-2'>Skip social media platforms that leave you guessing who&apos;s behind the computer: Get 3BX.</p>
           </div>
           <a href="https://register.3bx.live" className="button-orange mt-10" aria-label="Learn more about 3BX" role="button">Learn more</a>
         </div>
