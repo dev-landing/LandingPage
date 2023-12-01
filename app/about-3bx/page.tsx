@@ -8,9 +8,9 @@ const AboutPage = () => {
     <>
       <Nav />
       <p className='mt-16'>AboutPage</p>
-      <section className="flex flex-col lg:flex-row items-center lg:items-start mt-16">
+      <section className="flex flex-col lg:flex-row items-center lg:items-start mt-6 ml-4 lg:ml-16  w-[90%]">
         <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
-          <h2 className="text-xl lg:text-5xl font-bold mb-4 text-highlight">The 3BX Vision</h2>
+          <h2 className="text-2xl lg:text-5xl font-bold py-2 mb-4 text-highlight">The 3BX Vision</h2>
           <p className="mb-4">3BX was founded by William Thompson and Tapasya
               Cheulkar with one vision: to achieve independence
               for independents. 3BX, or Books Beats Box, was built
