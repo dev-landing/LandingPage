@@ -36,6 +36,30 @@ const AboutPage = () => {
           />
         </div>
       </section>
+      <section>
+      <div className="lg:mx-36 flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-12 sm:pb-12 lg:py-12">
+                    <Image
+                        //rotate the image upside down and flip it horizontally
+                        className="transform rotate-180 scale-x-[-1] hidden md:block"
+                        src="/quote.png"
+                        width={250}
+                        height={100}
+                        alt="Quote Illustration"
+                    />
+                    <div className="space-y-8 text-center lg:text-right">
+                        <h2 className="font-bold py-4 text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">
+                            Creating Independence for Independents
+                        </h2>
+                        <p className=" text-lg lg:text-xl xl:text-2xl ">
+                            This is the place to build with like minded
+                            individuals and further your unique style as an
+                            INDIE creative. Respond to your calling by making
+                            your passion your day Job
+                        </p>
+                    </div>
+                </div>
+      </section>
+
     </>
   )
 }
