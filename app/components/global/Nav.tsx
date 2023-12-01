@@ -5,9 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useLayoutEffect } from 'react';
 
-// Files
-import Search from '../../ui/Search';
-
 // !Icons
 import MenuIcon from '../../svg/menu-icon.svg';
 import CloseIcon from '@mui/icons-material/Close';
@@ -30,6 +27,7 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useLayoutEffect(() => {
+
         const gridIcon = document.querySelector('.grid-icon');
 
         gridIcon?.addEventListener("mouseover", () => gsap.to(".grid-svg", {rotate: 180, cursor: 'pointer', duration: 1.1, transformOrigin: "50% 50%"}));
@@ -41,66 +39,75 @@ const Nav = () => {
         socials?.forEach((social) => social.addEventListener("mouseleave", () => gsap.to(social, {rotate: -360, duration: 0.5, transformOrigin: "50% 50%", transform: "scale(1.0)"})));
     }, [])
 
+    const toggleMenu = () => {
+
+        setIsOpen(!isOpen);
+
+        var timeline = gsap.timeline();
+        if (!isOpen) {
+            timeline.to("#side-menu-background", { left: 0, duration: 0.3 })
+                    .to("#side-menu", { left: 0, duration: 0.3 });
+        } else {
+            timeline.to("#side-menu-background", { left: -415, duration: 0.3 })
+                    .to("#side-menu", { left: -400, duration: 0.3 });
+        }
+    };
+
 
     return (
         <div className="container">
-            <header className="fixed top-0 w-screen z-[2]">
-                <nav className="bg-[#000041] flex items-center justify-around">
-                    <div className="flex flex-row w-[250px] ml-[70px] text-[#FFFDFA] items-center justify-center sm:ml-0 sm:w-screen">
-                        <div className="text-[60px] items-center flex ml-[-30px] mr-[10px] overflow-hidden hover:cursor-pointer" onClick={() => {
-                            if(!isOpen) {
-                                setIsOpen(true); var timeline = gsap.timeline(); timeline.to("#side-menu-background", {left: 0, duration: 0.3}).to("#side-menu", {left: 0, duration: 0.3});
-                            }
-                            else if(isOpen) {
-                                setIsOpen(false); var timeline = gsap.timeline(); timeline.to("#side-menu-background", {left: -415, duration: 0.3}).to("#side-menu", {left: -400, duration: 0.3});
-                            }}}>
-                            <Image src={MenuIcon} alt='menu-icon' className="w-[40px] h-[40px]"/>
+            <header className="fixed top-0 w-full z-[2]">
+                <nav className="bg-original flex items-center justify-around p-4">
+                    <div className="flex items-center space-x-4">
+
+                        <div onClick={toggleMenu}>
+                            <Image src={MenuIcon} alt="menu icon" width={50} height={50}  className="cursor-pointer"/>
                         </div>
-                        <Link href='/' style={{display: 'flex', alignItems: 'center', fontSize: '30px', marginLeft: "5px"}}><Image src={Logo.src} alt="logo" width={50} height={50} style={{scale: "0.6"}} />3BX</Link>
+                        <Link href="/">
+                            <Image src={Logo.src} alt="logo" width={50} height={50} />
+                        </Link>
                     </div>
-                    <div className="w-[350px] xl:hidden">
-                        <Search placeholder="Search" />
-                    </div>
-                    <div className="flex justify-around w-[250px] h-[40px] sm:hidden">
-                        <button onClick={() => location.href="https://login.3bx.live"} className="bg-[#000041] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Sign In!</button>
-                        <button onClick={() => location.href="https://register.3bx.live"} className="bg-[#FC7A03] text-[#FFFDFA] w-[100px] border border-[#FFFDFA] rounded-[5px] h-[35px] shadow-[5px_5px_0_#108CFF]">Join</button>
+
+                    <div className="hidden sm:flex items-center space-x-4 p-2">
+                        <button onClick={() => location.href="https://login.3bx.live"} className="bg-original text-original-dark w-28 h-9 font-semibold border border-original-dark rounded-md shadow-custom hover:text-highlight">Sign In!</button>
+                        <button onClick={() => location.href="https://register.3bx.live"} className="bg-highlight text-original-dark font-semibold w-28 h-9 border border-original-dark rounded-md shadow-custom hover:text-original">Join</button>
                     </div>
                 </nav>
             </header>
-            <div id="side-menu" className="w-[400px] h-screen bg-[#FFFDFA] fixed flex flex-col justify-between z-[3] left-[-400px] top-0 text-[#000041]">
-                <div className="pt-[30px] ml-[40px] flex flex-row">
-                    <div className="text-[25px] text-[#000041] font-bold absolute top-[15px]"><h3>MENU</h3></div>
-                    <div className="absolute top-[15px] right-[50px] hover:cursor-pointer" onClick={() => {setIsOpen(false); var timeline = gsap.timeline(); timeline.to("#side-menu", {left: -400, duration: 0.3}).to("#side-menu-background", {left: -415, duration: 0.3}); }}><CloseIcon fontSize="large" /></div>
+            <div id="side-menu" className="w-96 h-screen bg-original-dark fixed flex flex-col justify-between z-[3] -left-96 top-0 text-original">
+                <div className="pt-8 ml-10 flex flex-row">
+                    <div className="text-[25px] text-original font-bold absolute top-4"><h3>MENU</h3></div>
+                    <div className="absolute top-4 right-12 hover:cursor-pointer" onClick={() => {setIsOpen(false); var timeline = gsap.timeline(); timeline.to("#side-menu", {left: -400, duration: 0.3}).to("#side-menu-background", {left: -415, duration: 0.3}); }}><CloseIcon fontSize="large" /></div>
                 </div>
                 
-                <div className="text-[30px] flex flex-col ml-[50px]">
-                    <a href="https://booksbeatsbox.com" className="flex flex-row items-baseline hover:cursor-pointer hover:text-[#FC7A03] hover:underline">
+                <div className="text-[30px] flex flex-col ml-12">
+                    <a href="https://booksbeatsbox.com" className="flex flex-row items-baseline hover:cursor-pointer hover:text-highlight hover:underline">
                         <Image src={HouseIcon} alt='house icon' className="self-start"/>
                         <h3 className="ml-[8px] mt-[5px]">Home</h3>
                     </a>
                     <Link href="/about-3bx">
-                        <div className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline">
-                            <Image src={InfoIcon} alt='info icon' className="ml-[6px]"/>
-                            <h3 className="ml-[15px]">About 3BX</h3>
+                        <div className="flex flex-row mt-4 hover:cursor-pointer hover:text-highlight hover:underline">
+                            <Image src={InfoIcon} alt='info icon' className="ml-2"/>
+                            <h3 className="ml-4">About 3BX</h3>
                         </div>
                     </Link>
                 </div>
 
                 <div className="border-t-[1px] border-t-[silver] w-[80%] self-center flex flex-col">
-                    <div><Link href="https://support.3bx.live" className="flex flex-row mt-[50px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Support</h3></Link></div>
-                    <div><Link href="https://register.3bx.live"  className="flex flex-row mt-[15px] hover:cursor-pointer hover:text-[#FC7A03] hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-[6px]"/><h3 className="ml-[15px] self-top text-[30px]">Register</h3></Link></div>
-                    <div className="border-[2px] border-[#000041] rounded-[5px] w-fit p-[10px] mt-[15px] ml-[5px] font-bold shadow-[3px_3px_0_#108CFF] hover:cursor-pointer hover:text-[#FFFDFA] hover:underline hover:bg-[#000041]"><Link href="https://login.3bx.live"><h3>Sign In!</h3></Link></div>
+                    <div><Link href="https://support.3bx.live" className="flex flex-row mt-12 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-2"/><h3 className="ml-4 self-top text-[30px]">Support</h3></Link></div>
+                    <div><Link href="https://register.3bx.live"  className="flex flex-row mt-4 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-2"/><h3 className="ml-4 self-top text-[30px]">Register</h3></Link></div>
+                    <div className="border-[2px] border-original rounded-[5px] w-fit p-3 my-4 ml-2 font-bold shadow-custom hover:cursor-pointer hover:text-original-dark hover:underline hover:bg-original"><Link href="https://login.3bx.live"><h3>Sign In!</h3></Link></div>
                 </div>
-                <div className="flex flex-row justify-evenly mb-[100px] overflow-hidden items-center h-[100px]">
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.facebook.com/profile.php?id=100091576004576"}><Image src={FacebookIcon} alt='facebook icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.instagram.com/booksbeatsbox/"}><Image src={InstagramIcon} alt='instagram icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://twitter.com/booksbeatsbox"}><Image src={TwitterIcon} alt='twitter icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.tiktok.com/@booksbeatsbox?lang=en"}><Image src={TiktokIcon} alt='tiktok icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.linkedin.com/company/3bx"}><Image src={LinkedinIcon} alt='linkedin icon' className="h-[40px] w-[40px]"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.youtube.com/@3bx-booksbeatsbox"}><Image src={YoutubeIcon} alt='youtube icon' className="h-[40px] w-[40px]"/></div>
+                <div className="flex flex-row justify-evenly mb-28 overflow-hidden items-center h-28">
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.facebook.com/profile.php?id=100091576004576"}><Image src={FacebookIcon} alt='facebook icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.instagram.com/booksbeatsbox/"}><Image src={InstagramIcon} alt='instagram icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://twitter.com/booksbeatsbox"}><Image src={TwitterIcon} alt='twitter icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.tiktok.com/@booksbeatsbox?lang=en"}><Image src={TiktokIcon} alt='tiktok icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.linkedin.com/company/3bx"}><Image src={LinkedinIcon} alt='linkedin icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.youtube.com/@3bx-booksbeatsbox"}><Image src={YoutubeIcon} alt='youtube icon' className="h-10 w-10"/></div>
                 </div>
             </div>
-            <div id="side-menu-background" className="w-[415px] fixed left-[-415px] top-[0] h-screen bg-[#FC7A03] rounded-[15px] z-[2] "></div>
+            <div id="side-menu-background" className="w-[415px] fixed left-[-415px] top-[0] h-screen bg-highlight rounded-3xl z-[2] "></div>
         </div>
     )
 }
