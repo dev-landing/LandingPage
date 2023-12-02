@@ -40,7 +40,7 @@ const AboutPage = () => {
 
       <section>
       <div className="lg:mx-36 flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-12 sm:pb-12 lg:py-12">
-                    <Image className="transform rotate-180 scale-x-[-1] hidden md:block" src="/quote.png"
+                    <Image className="transform rotate-180 scale-x-[-1] hidden lg:block" src="/quote.png"
                         width={250}  height={100} alt="Quote Illustration" />
                     <div className="space-y-8 text-center lg:text-right">
                         <h2 className="font-bold py-4 text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">
@@ -63,7 +63,7 @@ const AboutPage = () => {
         <div className="flex-1 space-y-8 mt-8">
           <div className="text-right">
             <h2 className="text-2xl lg:text-5xl font-bold py-2 mb-4 text-highlight">A Social Media Platform for All Creators</h2>
-            <p className="mb-4">Authors, musicians, artists — indie creators of all types — can dominate in the digital space with 3BX's easy-to-use interface and diverse opportunities to shine.</p>
+            <p className="mb-4">Authors, musicians, artists — indie creators of all types — can dominate in the digital space with 3BX&apos;s easy-to-use interface and diverse opportunities to shine.</p>
           </div>
           
           <div className="text-right">
@@ -75,24 +75,19 @@ const AboutPage = () => {
 
       <section className="px-4 py-6 lg:px-0 lg:py-0">
         <div className="lg:mx-36 flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-12 sm:pb-12 lg:py-12">
-          <div className="space-y-8">
+          <div>
             <h2 className="text-2xl lg:text-5xl font-bold py-2 mb-4">
               Market Your Work and Get Fans Like a Pro
             </h2>
             <p className="mb-4">
-              We made sure you don't lose any audience along the way with our incredible and user-friendly system where you can sync your data, fans, and more from other platforms.
+              We made sure you don&apos;t lose any audience along the way with our incredible and user-friendly system where you can sync your data, fans, and more from other platforms.
             </p>
           </div>
-          <Image
-            //rotate the image upside down and flip it horizontally
-            className="scale-x-[-1] hidden md:block"
-            src="/quote.png"
-            width={250}
-            height={100}
-            alt="Quote Illustration"
-          />
+          <Image className="scale-x-[-1] hidden lg:block" src="/quote.png" width={250} height={100} alt="Quote Illustration" />
         </div>
       </section>
+
+
 
 
     </>
