@@ -18,7 +18,7 @@ import TwitterIcon from '../../svg/twitter-icon.svg';
 import TiktokIcon from '../../svg/tiktok-icon.svg';
 import LinkedinIcon from '../../svg/linkedin-icon.svg';
 import YoutubeIcon from '../../svg/youtube-icon.svg';
-import Logo from '../../../public/3bx-logo.webp';
+import Logo from '../../svg/3bx-logo.svg';
 
 // !Animations
 import {gsap} from 'gsap'
@@ -61,10 +61,10 @@ const Nav = () => {
                     <div className="flex items-center space-x-4">
 
                         <div onClick={toggleMenu}>
-                            <Image src={MenuIcon} alt="menu icon" width={50} height={50}  className="cursor-pointer"/>
+                            <Image src={MenuIcon} alt="menu icon" width={40} height={40}  className="cursor-pointer"/>
                         </div>
                         <Link href="/">
-                            <Image src={Logo.src} alt="logo" width={50} height={50} />
+                            <Image src={Logo} alt="logo" width={40} height={40} className="h-9 w-auto" />
                         </Link>
                     </div>
 
@@ -81,30 +81,30 @@ const Nav = () => {
                 </div>
                 
                 <div className="text-[30px] flex flex-col ml-12">
-                    <a href="https://booksbeatsbox.com" className="flex flex-row items-baseline hover:cursor-pointer hover:text-highlight hover:underline">
+                    <Link href="https://booksbeatsbox.com" className="flex flex-row items-baseline hover:cursor-pointer hover:text-highlight hover:underline">
                         <Image src={HouseIcon} alt='house icon' className="self-start"/>
                         <h3 className="ml-[8px] mt-[5px]">Home</h3>
-                    </a>
+                    </Link>
                     <Link href="/about-3bx">
                         <div className="flex flex-row mt-4 hover:cursor-pointer hover:text-highlight hover:underline">
-                            <Image src={InfoIcon} alt='info icon' className="ml-2"/>
+                            <Image src={InfoIcon} alt='info icon' width={40} height={40} className="h-9 w-auto"/>
                             <h3 className="ml-4">About 3BX</h3>
                         </div>
                     </Link>
                 </div>
 
                 <div className="border-t-[1px] border-t-[silver] w-[80%] self-center flex flex-col">
-                    <div><Link href="https://support.3bx.live" className="flex flex-row mt-12 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={SupportIcon} alt='support icon' className="ml-2"/><h3 className="ml-4 self-top text-[30px]">Support</h3></Link></div>
-                    <div><Link href="https://register.3bx.live"  className="flex flex-row mt-4 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={RegisterIcon} alt='register icon' className="ml-2"/><h3 className="ml-4 self-top text-[30px]">Register</h3></Link></div>
+                    <div><Link href="https://support.3bx.live" className="flex flex-row mt-12 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={SupportIcon} alt='support icon' width={40} height={40} className="ml-2 h-9 w-auto"/><h3 className="ml-4 self-top text-[30px]">Support</h3></Link></div>
+                    <div><Link href="https://register.3bx.live"  className="flex flex-row mt-4 hover:cursor-pointer hover:text-highlight hover:underline"><Image src={RegisterIcon} alt='register icon' width={40} height={40} className="ml-2 h-9 w-auto"/><h3 className="ml-4 self-top text-[30px]">Register</h3></Link></div>
                     <div className="border-[2px] border-original rounded-[5px] w-fit p-3 my-4 ml-2 font-bold shadow-custom hover:cursor-pointer hover:text-original-dark hover:underline hover:bg-original"><Link href="https://login.3bx.live"><h3>Sign In!</h3></Link></div>
                 </div>
                 <div className="flex flex-row justify-evenly mb-28 overflow-hidden items-center h-28">
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.facebook.com/profile.php?id=100091576004576"}><Image src={FacebookIcon} alt='facebook icon' className="h-10 w-10"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.instagram.com/booksbeatsbox/"}><Image src={InstagramIcon} alt='instagram icon' className="h-10 w-10"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://twitter.com/booksbeatsbox"}><Image src={TwitterIcon} alt='twitter icon' className="h-10 w-10"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.tiktok.com/@booksbeatsbox?lang=en"}><Image src={TiktokIcon} alt='tiktok icon' className="h-10 w-10"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.linkedin.com/company/3bx"}><Image src={LinkedinIcon} alt='linkedin icon' className="h-10 w-10"/></div>
-                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.youtube.com/@3bx-booksbeatsbox"}><Image src={YoutubeIcon} alt='youtube icon' className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.facebook.com/profile.php?id=100091576004576"}><Image src={FacebookIcon} alt='facebook icon' width={40} height={40} className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.instagram.com/booksbeatsbox/"}><Image src={InstagramIcon} alt='instagram icon' width={40} height={40} className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://twitter.com/booksbeatsbox"}><Image src={TwitterIcon} alt='twitter icon' width={40} height={40} className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.tiktok.com/@booksbeatsbox?lang=en"}><Image src={TiktokIcon} alt='tiktok icon' width={40} height={40} className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.linkedin.com/company/3bx"}><Image src={LinkedinIcon} alt='linkedin icon' width={40} height={40} className="h-10 w-10"/></div>
+                    <div id="social" className="mx-[-50px] h-auto w-auto hover:cursor-pointer" onClick={() => location.href="https://www.youtube.com/@3bx-booksbeatsbox"}><Image src={YoutubeIcon} alt='youtube icon' width={40} height={40} className="h-10 w-10"/></div>
                 </div>
             </div>
             <div id="side-menu-background" className="w-[415px] fixed left-[-415px] top-[0] h-screen bg-highlight rounded-3xl z-[2] "></div>

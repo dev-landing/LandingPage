@@ -19,7 +19,10 @@ const Footer = () => {
 
         <div className="hidden lg:block flex-1">
           <Link href="https://booksbeatsbox.com" aria-label="Home">
-            <Image src={Logo.src} alt="logo" width={30} height={30} />
+            <div className='flex items-center gap-4'>
+              <Image src={Logo.src} alt="logo" width={30} height={30} className="h-9 w-auto" />
+              <p className='text-xl font-semibold'>Books Beats Box</p>
+            </div>
           </Link>
         </div>
 
@@ -52,7 +55,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="w-[90%] text-center border-t border-gray-300 py-2 overflow-hidden">
+      <p className="w-[90%] text-center border-t border-gray-300 overflow-hidden pt-2">
         © 2023 All rights reserved
       </p>
     </footer>

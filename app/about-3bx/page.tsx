@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../components/global/Nav'
 import Link from 'next/link'
 import Image from 'next/image'
+import Footer from '../components/global/Footer'
 
 const AboutPage = () => {
   return (
@@ -135,6 +136,8 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
 
     </div>
   )
