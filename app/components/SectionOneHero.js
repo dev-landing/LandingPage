@@ -7,7 +7,7 @@ import React, {useLayoutEffect, useState} from 'react';
 // !svgs
 import RocketShip from '../svg/page-1-rocket.svg';
 
-const PageOne = () => {
+const SectionOneHero = () => {
 
   useLayoutEffect(() => {
     const rocketship = window.document.querySelector('#rocketship');
@@ -108,4 +108,4 @@ const PageOne = () => {
   );
 };
 
-export default PageOne;
+export default SectionOneHero;

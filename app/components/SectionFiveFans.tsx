@@ -7,10 +7,10 @@ import React, {useLayoutEffect} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const PageFive = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+const SectionFiveFans = () => {
+  
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to("#page-5-container", { scrollTrigger: { trigger: "#page-5-container", start: "5% bottom" }, x: 0, duration: 1.5 });
   }, []);
 
@@ -32,4 +32,4 @@ const PageFive = () => {
   );
 };
 
-export default PageFive;
+export default SectionFiveFans;

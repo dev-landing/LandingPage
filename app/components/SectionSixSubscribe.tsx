@@ -3,31 +3,34 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Footer from "./global/Footer";
 
-const PageSix = () => {
+const SectionSixSubscribe = () => {
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  const parentNode = event.target;
-  if (parentNode.querySelector("#zc_spmSubmit")) {
-    parentNode.querySelector("#zc_spmSubmit").remove();
-  }
-  parentNode.submit();
-};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+
+    event.preventDefault();
+    const parentNode = event.currentTarget;
+    const submitButton = parentNode.querySelector("#zc_spmSubmit");
+    if (submitButton) {
+      submitButton.remove();
+    }
+    parentNode.submit();
+  };
 
 
 return (
-  <div className="flex flex-col items-center justify-start w-full h-screen bg-[#000041]">
+  <div className="flex flex-col items-center justify-start w-full h-screen">
     {/* Gray banner */}
-    <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start bg-inactive w-full h-64 sm:h-40 py-2 mt-20">
-      <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130}/>
+    <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start bg-inactive w-full h-64 sm:h-40 py-2 mt-24">
+      <Image src="./genius_is_common.svg" alt="Genius Is Common" width={130} height={130} className="h-9 w-auto"/>
       <p className="w-[90%] sm:w-[60%] pt-2 text-sm text-center sm:text-left"><span className="font-semibold">&quot;The Genius is Common Movement</span> is about tearing down the Berlin Wall of the word genius.&quot;<span className="font-semibold">Be inspired - Be engaged - Be empowered...</span></p>
     </div>
 
     {/* Submit Form */}
     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-[90%] p-2 h-full mt-4">
       <p className="text-4xl lg:text-6xl font-bold overflow-hidden text-center lg:text-left">Be <span className="bg-gradient-to-r from-orange-400 to-blue-600 bg-clip-text text-transparent">
-        first </span> to hear about our drops <span className="text-sky-600 text-3xl lg:text-8xl">.</span></p>
+        first </span> to hear about our drops <span className="text-sky-600 text-6xl">.</span></p>
 
       <div className="border-4 shadow-custom p-6 rounded-tr-lg rounded-bl-lg rounded-br-lg w-full lg:max-w-md mt-10">
           <h2 className="text-lg font-semibold mb-4">Join our email list to get updates</h2>
@@ -55,7 +58,7 @@ return (
           
             <label htmlFor="email" className="block text-sm font-bold mb-2">Email Address</label>
                 <div className="mb-4 flex justify-between items-center">
-                  <input type="email" id="EMBED_FORM_EMAIL_LABEL" name="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
+                <input type="email" id="EMBED_FORM_EMAIL_LABEL" name="CONTACT_EMAIL" data-changeitem="SIGNUP_FORM_FIELD" className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
                 </div>
                 <div className="flex justify-end mt-auto py-2 pr-2">
                   <button type="submit" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin"
@@ -70,8 +73,9 @@ return (
           </h4>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
 
-export default PageSix;
+export default SectionSixSubscribe;

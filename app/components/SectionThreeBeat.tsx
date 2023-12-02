@@ -6,10 +6,10 @@ import React, {useLayoutEffect} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const PageThree = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+const SectionThreeBeat = () => {
+  
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to("#page-3-container", { scrollTrigger: { trigger: "#page-3-container", start: "5% bottom" }, x: 0, duration: 1.5 });
   }, []);
 
@@ -33,4 +33,4 @@ const PageThree = () => {
   );
 };
 
-export default PageThree;
+export default SectionThreeBeat;

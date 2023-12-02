@@ -7,10 +7,10 @@ import React, {useLayoutEffect} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const PageFour = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+const SectionFourBox = () => {
+  
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to("#page-4-container", { scrollTrigger: { trigger: "#page-4-container", start: "5% bottom" }, x: 0, duration: 1.5 });
   }, []);
 
@@ -34,4 +34,4 @@ const PageFour = () => {
   );
 };
 
-export default PageFour;
+export default SectionFourBox;

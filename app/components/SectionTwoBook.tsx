@@ -5,10 +5,10 @@ import React, {useLayoutEffect} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const PageTwo = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+const SectionTwoBook = () => {
+  
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to("#page-2-container", {scrollTrigger: {trigger: "#page-2-container", start: "5% bottom"}, x: 0, duration: 1.5});
   }, [])
 
@@ -32,4 +32,4 @@ const PageTwo = () => {
   );
 };
 
-export default PageTwo;
+export default SectionTwoBook;
