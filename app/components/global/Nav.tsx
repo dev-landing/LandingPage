@@ -57,7 +57,7 @@ const Nav = () => {
     return (
         <div className="container">
             <header className="fixed top-0 w-full z-[2]">
-                <nav className="bg-original flex items-center justify-around p-4">
+                <nav className="bg-original flex items-center justify-around p-2">
                     <div className="flex items-center space-x-4">
 
                         <div onClick={toggleMenu}>
