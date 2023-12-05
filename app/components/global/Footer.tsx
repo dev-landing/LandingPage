@@ -27,10 +27,9 @@ const Footer = () => {
         </div>
 
         <div className="hidden lg:block flex-1 text-center">
-          {/* REMOVE THE POINTER EVENTS NONE, IF THERE IS A LINK TO TERMS AND CONDITIONS ////////////////////////// */}
-          <Link href="#" className="pointer-events-none" aria-label="Terms and Conditions">
-            <p>Terms & Conditions</p>
-          </Link>
+          <Link href="https://agreements.3bx.live/agreements/ToS.pdf" target="_blank" rel="noopener noreferrer" aria-label="Terms of Service">Terms of Service </Link>
+          &
+          <Link href="https://agreements.3bx.live/agreements/Privacy.pdf" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy"> Privacy Policy</Link>
         </div>
 
         <div className="flex flex-1 justify-center">
