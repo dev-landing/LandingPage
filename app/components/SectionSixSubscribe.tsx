@@ -1,7 +1,9 @@
 
 "use client"
 
-import React, { useState } from "react";
+import React, { useLayoutEffect } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/legacy/image";
 import Footer from "./global/Footer";
 
@@ -18,21 +20,37 @@ const SectionSixSubscribe = () => {
     parentNode.submit();
   };
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".gray-banner", {
+      scrollTrigger: {
+        trigger: ".gray-banner",
+        start: "top bottom",
+        toggleActions: "play none none none",
+        scrub: 1,
+      },
+      scale: 1,
+      duration: 2,
+      ease: "power2.out",
+    });
+  }, []);
+
 
 return (
   <div className="flex flex-col items-center justify-between w-full h-screen">
 
-    {/* Gray banner */}
-    <div className="flex flex-col sm:flex-row justify-around items-center sm:items-center bg-inactive w-full py-2 mt-20">
-      <div className="w-20 sm:w-48">
-        <Image src="/genius_is_common.svg" alt="Genius Is Common" width={130} height={130} layout="responsive" />
+      {/* Gray banner */}
+      <div className="gray-banner flex flex-col sm:flex-row justify-around items-center sm:items-center bg-inactive w-full py-2 mt-20" style={{ scale: 3 }}>
+        <div className="w-20 sm:w-48">
+          <Image src="/genius_is_common.svg" alt="Genius Is Common" width={130} height={130} layout="responsive" />
+        </div>
+        <p className="w-[90%] sm:w-[60%] text-center sm:text-left text-sm lg:text-2xl md:text-xl italic">
+          <span className="font-semibold">&quot;The Genius is Common Movement </span>
+          is about tearing down the Berlin Wall of the word genius.&quot;
+          <span className="font-semibold underline"> Be inspired - Be engaged - Be empowered...</span>
+        </p>
       </div>
-      <p className="w-[90%] sm:w-[60%] text-center sm:text-left text-sm lg:text-2xl md:text-xl italic">
-        <span className="font-semibold">&quot;The Genius is Common Movement </span>
-        is about tearing down the Berlin Wall of the word genius.&quot;
-        <span className="font-semibold underline"> Be inspired - Be engaged - Be empowered...</span>
-      </p>
-    </div>
 
     {/* Submit Form */}
     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-[95%] p-2 lg:my-4">
