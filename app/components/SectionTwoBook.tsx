@@ -1,20 +1,29 @@
 "use client"
 
-import React, {useLayoutEffect} from 'react';
-
-import gsap from 'gsap';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 const SectionTwoBook = () => {
   
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#page-2-container", {scrollTrigger: {trigger: "#page-2-container", start: "5% bottom"}, x: 0, duration: 1.5});
-  }, [])
+    gsap.to("#page-2-container", {
+      scrollTrigger: {
+        trigger: "#page-2-container",
+        // start: "top bottom", end: "top bottom", toggleActions: "play none none none", once: true, // ONLY ONCE IN AND REMAINS
+        start: "top bottom", end: "center center", scrub: 1, // SCROLLING DOWN APPEARS, SCROLLING FURTHER REMAINS. SCROLLING UP DISAPPEARS
+      },
+      opacity: 1, x: 0, duration: 1.5,
+    });
+  }, []);
+
 
   return (
     <div className="flex justify-end items-center w-full h-screen">
-      <div id="page-2-container" className="flex flex-col lg:flex-row justify-center items-center w-full gap-4 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible h-4/5 lg:w-11/12 lg:gap-14 lg:translate-x-0">
+      <div id="page-2-container" style={{ transform: 'translateX(100vw)' }}
+        className="flex flex-col lg:flex-row justify-center items-center w-full gap-4 bg-gradient-to-b from-[#6a99c548] to-[#01016860] rounded-s-full overflow-visible h-4/5 lg:w-11/12 lg:gap-14 lg:translate-x-0">
         <div className="relative w-full max-w-[30%] pb-[30%] lg:max-w-[45%] lg:pb-[45%] xl:max-w-[600px] xl:pb-[600px] sm:max-w-[30%] sm:pb-[30%] overflow-hidden">
           <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover" aria-hidden="true">
             <source src="/books.mp4" type="video/mp4" />
