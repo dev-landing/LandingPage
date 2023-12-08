@@ -45,7 +45,7 @@ return (
         <div className="w-20 sm:w-48">
           <Image src="/genius_is_common.svg" alt="Genius Is Common" width={130} height={130} layout="responsive" />
         </div>
-        <p className="w-[90%] sm:w-[60%] text-center sm:text-left text-sm lg:text-2xl md:text-xl italic">
+        <p className="w-[90%] sm:w-[60%] text-black text-center sm:text-left text-sm lg:text-2xl md:text-xl italic">
           <span className="font-semibold">&quot;The Genius is Common Movement </span>
           is about tearing down the Berlin Wall of the word genius.&quot;
           <span className="font-semibold underline"> Be inspired - Be engaged - Be empowered...</span>
