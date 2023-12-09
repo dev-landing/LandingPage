@@ -89,7 +89,7 @@ const SectionOneHero = () => {
           <button className="button-orange px-10 py-3 mt-8 lg:mt-10" aria-label="Get ready for takeoff">Get Ready for Take Off</button>
         </div>
         <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:w-full lg:ml-12">
-          <Image src={RocketShip} id="rocketship" alt="Illustration of a rocket ship" />
+          <Image src={RocketShip} id="rocketship" alt="Illustration of a rocket ship" priority />
           <div id="blurbs" className="bg-original-dark h-28 w-96 rounded-bl-full rounded-r-full shadow-lg flex items-center justify-center mt-10 ml-[-9rem] mr-6 z-10">
             <div id="blurb-first" className="hidden">
               <p className="text-justify text-original px-4">What&apos;s up my friend? Welcome to <span className="font-bold text-highlight">Books Beats Box</span> of <span className="font-bold text-highlight">3BX</span></p>

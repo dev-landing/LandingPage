@@ -61,7 +61,7 @@ const Nav = () => {
                     <div className="flex items-center space-x-4">
 
                         <div onClick={toggleMenu}>
-                            <Image src={MenuIcon} alt="menu icon" width={40} height={40}  className="cursor-pointer"/>
+                            <Image src={MenuIcon} alt="menu icon" width={40} height={40}  className="cursor-pointer" priority />
                         </div>
                         <Link href="/">
                             <Image src={Logo} alt="logo" width={40} height={40} className="h-9 w-auto" />
