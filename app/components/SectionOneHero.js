@@ -86,7 +86,7 @@ const SectionOneHero = () => {
         <div>
           <p className="paragraph text-highlight font-bold text-3xl lg:text-4xl py-2 lg:text-left">The Original Social Marketplace Where Independent Creators & Fans Converge.</p>
           <p className="mt-10 text-lg lg:hidden">Explore the 3BX Universe to find the most out of this world content or use the Books Beats Box Launchpad to blast off your Indie Career</p>
-          <button className="button-orange px-10 py-3 mt-8 lg:mt-10" aria-label="Get ready for takeoff">Get Ready for Take Off</button>
+          <p className='py-10'><a href="https://register.3bx.live" className="button-orange mt-10" aria-label="Get ready for takeoff" role="button">Get Ready for Take Off</a></p>
         </div>
         <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:w-full lg:ml-12">
           <Image src={RocketShip} id="rocketship" alt="Illustration of a rocket ship" priority />

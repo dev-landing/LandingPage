@@ -28,6 +28,6 @@ input, textarea, select {
 } 
 
 .button-orange {
-  @apply text-original-dark bg-highlight font-semibold border-2 p-2 md:p-4 px-8 md:px-14 min-w-max rounded-sm hover:-translate-y-1 transition duration-200 overflow-visible;
+  @apply text-original-dark bg-highlight font-semibold border-2 p-2 md:p-4 px-8 md:px-14 min-w-max rounded-md hover:-translate-y-1 transition duration-200 overflow-visible;
 } 
 
