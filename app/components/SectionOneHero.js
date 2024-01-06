@@ -92,13 +92,13 @@ const SectionOneHero = () => {
           <Image src={RocketShip} id="rocketship" alt="Illustration of a rocket ship" priority />
           <div id="blurbs" className="bg-original-dark h-28 w-96 rounded-bl-full rounded-r-full shadow-lg flex items-center justify-center mt-10 ml-[-9rem] mr-6 z-10">
             <div id="blurb-first" className="hidden">
-              <p className="text-justify text-original px-4">What&apos;s up my friend? Welcome to <span className="font-bold text-highlight">Books Beats Box</span> of <span className="font-bold text-highlight">3BX</span></p>
+              <p className="text-justify text-original px-4">What&apos;s up my friend? Welcome to <span className="font-bold text-highlight">Books Beats Box</span> or <span className="font-bold text-highlight">3BX</span>.</p>
             </div>
             <div id="blurb-second" className="hidden">
-              <p className="text-justify text-original px-4">Explore the <span className="font-bold text-highlight">3BX Universe</span> to find the most out of this world content</p>
+              <p className="text-justify text-original px-4">Explore the <span className="font-bold text-highlight">3BX Universe</span> to find the most out of this world content.</p>
             </div>
             <div id="blurb-third" className="hidden">
-              <p className="text-justify text-original px-4">or use the <span className="font-bold text-highlight">Books Beats Box</span> launchpad to blast off your <span className="font-bold text-highlight">Indie Career</span></p>
+              <p className="text-justify text-original px-4">Or use the <span className="font-bold text-highlight">Books Beats Box</span> to blast off your <span className="font-bold text-highlight">Indie Career</span>.</p>
             </div>
           </div>
         </div>
