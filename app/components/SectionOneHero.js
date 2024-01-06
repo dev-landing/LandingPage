@@ -98,7 +98,7 @@ const SectionOneHero = () => {
               <p className="text-justify text-original px-4">Explore the <span className="font-bold text-highlight">3BX Universe</span> to find the most out of this world content.</p>
             </div>
             <div id="blurb-third" className="hidden">
-              <p className="text-justify text-original px-4">Or use the <span className="font-bold text-highlight">Books Beats Box</span> to blast off your <span className="font-bold text-highlight">Indie Career</span>.</p>
+              <p className="text-justify text-original px-4">Or use the <span className="font-bold text-highlight">Books Beats Box</span> launchpad to blast off your <span className="font-bold text-highlight">Indie Career</span>.</p>
             </div>
           </div>
         </div>
